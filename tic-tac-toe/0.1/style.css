@@ -1,0 +1,194 @@
+/* CSS Reset */
+
+* {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  margin: 10px 0 10px;
+  text-align: center;
+  font-size: 50px;
+}
+
+body {
+  background-image: url("./pattern.png");
+}
+
+/* Turn Box */
+
+.turn-box {
+  width: 380px;
+  height: 50px;
+  border: 2px solid black;
+  margin: 0 auto 25px;
+  display: flex;
+}
+
+.turn-box * {
+  display: inline-block;
+  border: 2px solid black;
+  text-align: center;
+  font-size: 40px;
+  line-height: 50px;
+  flex: 1;
+}
+
+.turn-box *.active {
+  background-color: skyblue;
+}
+
+/* Container */
+
+.container {
+  position: relative;
+  width: 480px;
+  height: 470px;
+  border: 5px solid black;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  place-content: stretch stretch;
+  place-items: stretch stretch;
+  margin: auto;
+  font-weight: bold;
+}
+
+.container .cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+  background-color: #ddd;
+  border: 5px solid black;
+  font-size: 100px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.container .cell:hover {
+  background-color: skyblue;
+}
+
+.container.ended::after {
+  position: absolute;
+  content: "";
+  display: block;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: red;
+  opacity: 0;
+}
+
+/* Restart Button */
+
+.restart {
+  display: none;
+  margin: 20px auto 0;
+  font-size: 30px;
+  border-radius: 10px;
+  border: 5px solid black;
+  cursor: pointer;
+}
+
+.restart a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  flex: 1;
+}
+
+.restart.game-over {
+  display: flex;
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1336px) {
+  .turn-box {
+    width: 270px;
+    font-size: 15px;
+  }
+
+  .turn-box * {
+    line-height: 50px;
+  }
+
+  .container {
+    width: 400px;
+    height: 390px;
+  }
+
+  .container .cell {
+    font-size: 60px;
+  }
+
+  .restart {
+    border-width: 3.5px;
+  }
+
+  .restart a {
+    padding: 8px 13px;
+    font-size: 30px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .turn-box {
+    width: 270px;
+    font-size: 15px;
+  }
+
+  .turn-box * {
+    line-height: 50px;
+  }
+
+  .container .cell {
+    font-size: 60px;
+  }
+
+  .restart {
+    border-width: 3.5px;
+  }
+
+  .restart a {
+    padding: 8px 13px;
+    font-size: 30px;
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  .turn-box {
+    width: 210px;
+    height: 50px;
+    font-size: 20px;
+  }
+
+  .turn-box * {
+    line-height: 50px;
+  }
+
+  .container {
+    width: 300px;
+    height: 270px;
+  }
+
+  .container .cell {
+    font-size: 50px;
+  }
+
+  .restart {
+    border-width: 3.5px;
+  }
+
+  .restart a {
+    font-size: 20px;
+  }
+}
