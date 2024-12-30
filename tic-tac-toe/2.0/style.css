@@ -15,16 +15,16 @@ body {
 
 .title {
   margin: 10px 0;
-  text-align: center;
   font-size: 50px;
+  text-align: center;
 }
 
 /* Two Modes Container */
 
 .two-modes-container {
-  margin: 200px auto;
   width: 600px;
   height: 180px;
+  margin: 200px auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -34,23 +34,23 @@ body {
 
 .two-modes-container .select-mode-title {
   width: 100%;
-  text-align: center;
   font-size: 40px;
+  text-align: center;
 }
 
 .two-modes-container div {
+  margin: 10px;
+  padding: 20px 5px;
+  border: 5px solid black;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex: 1;
   font-size: 30px;
   font-weight: bold;
-  margin: 10px;
-  padding: 20px 5px;
-  transition: 0.3s;
-  border: 5px solid black;
-  border-radius: 10px;
   cursor: pointer;
-  flex: 1;
+  transition: 0.3s;
 }
 
 .two-modes-container div:hover {
@@ -59,38 +59,33 @@ body {
 
 /* Turn Box */
 
-#container,
-#turn-box {
-  display: none;
-}
-
 .turn-box {
-  position: relative;
   width: 380px;
   height: 50px;
-  border: 2px solid black;
-  margin: 0 auto 25px;
   display: none;
+  position: relative;
+  margin: 0 auto 25px;
+  border: 2px solid black;
 }
 
 .turn-box * {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 2px solid black;
-  text-align: center;
   font-size: 40px;
-  line-height: 50px;
   flex: 1;
 }
 
 .turn-box::after {
   content: "";
   display: block;
-  position: absolute;
-  left: 0;
   width: 50%;
   height: 100%;
-  background-color: skyblue;
+  position: absolute;
+  left: 0;
   z-index: -9999;
+  background-color: skyblue;
   transition: 0.3s;
 }
 
@@ -109,28 +104,28 @@ body {
 /* Container */
 
 .container {
-  position: relative;
   width: 480px;
   height: 470px;
+  margin: auto;
   border: 5px solid black;
   display: none;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   place-content: stretch stretch;
   place-items: stretch stretch;
-  margin: auto;
+  position: relative;
   font-weight: bold;
 }
 
 .container .cell {
+  border: 5px solid black;
+  box-sizing: border-box;
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.3s;
-  border: 5px solid black;
   font-size: 0;
   cursor: pointer;
-  box-sizing: border-box;
+  transition: 0.3s;
 }
 
 .container .cell.filled {
@@ -142,9 +137,9 @@ body {
 }
 
 .container.ended::after {
-  position: absolute;
   content: "";
   display: block;
+  position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
@@ -155,20 +150,24 @@ body {
 /* Restart Button */
 
 .restart {
-  display: none;
   margin: 20px auto 0;
-  font-size: 30px;
-  border-radius: 10px;
   border: 5px solid black;
+  border-radius: 10px;
+  display: none;
+  font-size: 30px;
   cursor: pointer;
+}
+
+.restart:hover {
+  background-color: lightblue;
 }
 
 .restart a {
   padding: 10px 20px;
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
   flex: 1;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .restart.game-over {
@@ -182,10 +181,6 @@ body {
   .turn-box {
     width: 270px;
     font-size: 15px;
-  }
-
-  .turn-box * {
-    line-height: 50px;
   }
 
   .container {
@@ -205,18 +200,6 @@ body {
     padding: 8px 13px;
     font-size: 30px;
   }
-
-  .two-modes-container {
-    width: 500px;
-  }
-
-  .two-modes-container .select-mode-title {
-    font-size: 35px;
-  }
-
-  .two-modes-container div {
-    font-size: 25px;
-  }
 }
 
 /* Tablet */
@@ -224,10 +207,6 @@ body {
   .turn-box {
     width: 270px;
     font-size: 15px;
-  }
-
-  .turn-box * {
-    line-height: 50px;
   }
 
   .container .cell.filled {
@@ -242,20 +221,6 @@ body {
     padding: 8px 13px;
     font-size: 30px;
   }
-
-  .two-modes-container {
-    width: 420px;
-  }
-
-  .two-modes-container .select-mode-title {
-    font-size: 30px;
-  }
-
-  .two-modes-container div {
-    margin-top: -30px;
-    padding: 15px 10px;
-    font-size: 20px;
-  }
 }
 
 /* Mobile Phone */
@@ -264,10 +229,6 @@ body {
     width: 210px;
     height: 50px;
     font-size: 20px;
-  }
-
-  .turn-box * {
-    line-height: 50px;
   }
 
   .container {
@@ -285,19 +246,5 @@ body {
 
   .restart a {
     font-size: 20px;
-  }
-
-  .two-modes-container {
-    width: 250px;
-  }
-
-  .two-modes-container .select-mode-title {
-    text-align: center;
-    margin-bottom: 5px;
-  }
-
-  .two-modes-container div {
-    margin: 10px;
-    padding: 20px 30px;
   }
 }
