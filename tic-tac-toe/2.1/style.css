@@ -35,11 +35,9 @@ body {
   align-items: center;
   align-content: center;
   text-align: center;
-  /* background-color: lightblue; */
 }
 
 .two-modes-container .select-mode-title {
-  /* background-color: rgba(255, 99, 71, 0.4); */
   margin: 10px;
   width: 100%;
   font-size: 40px;
