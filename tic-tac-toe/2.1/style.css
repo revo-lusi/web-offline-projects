@@ -1,5 +1,9 @@
 /* CSS Reset */
 
+:root {
+  zoom: 100%;
+}
+
 * {
   font-family: sans-serif;
   margin: 0;
