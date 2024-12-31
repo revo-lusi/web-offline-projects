@@ -23,7 +23,7 @@ let turn = "X",
   bot = "O";
 
 // PvE (player vs environtment/bot) Mode
-PveMode.addEventListener("click", (e) => {
+PveMode.addEventListener("click", () => {
   // Turn on all displays!
   twoModesContainer.style.display = "none";
   turnBox.style.display = "flex";
@@ -53,7 +53,7 @@ PveMode.addEventListener("click", (e) => {
 });
 
 // PvP (player vs player) Mode
-PvpMode.addEventListener("click", (e) => {
+PvpMode.addEventListener("click", () => {
   // Turn on all displays!
   twoModesContainer.style.display = "none";
   turnBox.style.display = "flex";
