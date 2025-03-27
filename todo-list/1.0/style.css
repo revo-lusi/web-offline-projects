@@ -1,0 +1,190 @@
+/* CSS Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: cursive, sans-serif;
+}
+
+/* Input Form Style */
+
+.container {
+  margin: 40px auto;
+  padding: 30px;
+  width: 50%;
+  text-align: center;
+  /* background-color: seagreen; */
+}
+
+.title {
+  text-align: center;
+  font-size: 40px;
+  margin: 0 auto 30px;
+}
+
+.container #input-task-form {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container #input-task-form input {
+  flex: 10;
+  padding: 10px;
+}
+
+.container #input-task-form .add-task-button {
+  margin-left: 10px;
+  flex: 1;
+  border-radius: 3px solid black;
+  padding: 10px;
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .add-task-button:hover {
+  background-color: lightblue;
+  cursor: pointer;
+}
+
+/* Task Style */
+
+.container .container-task {
+  margin: 30px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  /* width: 100%; */
+  list-style: none;
+  font-size: 30px;
+  box-sizing: border-box;
+}
+
+.container .container-task .task {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  text-align: left;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 3px;
+  margin: 8px auto;
+}
+
+.container .container-task .task span {
+  padding-left: 10px;
+  flex: 1;
+}
+
+.container .container-task .task .check-task {
+  width: 30px;
+  cursor: pointer;
+}
+
+.container .container-task .task .delete-task {
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 25px;
+  margin-right: 5px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 50%;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+.container .container-task .task .delete-task:hover {
+  background-color: red;
+  color: whitesmoke;
+}
+
+.container .container-task .task.checked span {
+  text-decoration: line-through;
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1336px) {
+  .title {
+    font-size: 30px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .title {
+    font-size: 22px;
+  }
+
+  .container {
+    width: 80%;
+  }
+
+  .container .container-task .task {
+    font-size: 20px;
+  }
+
+  .container .container-task .task span {
+    padding-left: 10px;
+    flex: 1;
+  }
+
+  .container .container-task .task .check-task {
+    width: 25px;
+  }
+
+  .container .container-task .task .delete-task {
+    width: 15px;
+    height: 15px;
+    line-height: 10px;
+  }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+  .title {
+    font-size: 18px;
+  }
+
+  .container #input-task-form input {
+    flex: 5;
+    padding: 5px;
+    font-size: 11px;
+  }
+
+  .container #input-task-form .add-task-button {
+    font-size: 11px;
+    padding: 5px;
+  }
+
+  .container {
+    width: 80%;
+  }
+
+  .container .container-task .task {
+    font-size: 13px;
+  }
+
+  .container .container-task .task span {
+    flex: 1;
+  }
+
+  .container .container-task .task .check-task {
+    width: 15px;
+  }
+
+  .container .container-task .task .delete-task {
+    width: 8px;
+    height: 8px;
+    line-height: 7px;
+    margin-left: 5px;
+  }
+}

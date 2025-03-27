@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List (1.0)</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 id="title" class="title">Aplikasi Todo List (1.0)</h1>
+
+      <div id="input-task-form">
+        <input
+          type="text"
+          placeholder="Masukkan Tugas..."
+          autofocus
+          autocomplete="off"
+          class="input-task"
+          id="input-task"
+          aria-required="true"
+        />
+        <button id="add-task-button" class="add-task-button">Tambahkan</button>
+      </div>
+
+      <ul class="container-task" id="container-task"></ul>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
