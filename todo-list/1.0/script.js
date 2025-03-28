@@ -47,18 +47,23 @@ containerTask.addEventListener("click", (e) => {
     }
   } else if (e.target.classList.contains("check-task")) {
     // Ketika checkbox di klik
-    if (!e.target.checked) {
-      e.target.parentNode.classList.remove("checked");
-      localStorage.setItem("tasks", JSON.stringify(tasks));
-    } else {
+    if (e.target.checked) {
       e.target.parentNode.classList.add("checked");
       tasks.forEach((el) => {
         if (e.target.nextElementSibling.innerText == el.task) {
           el.isChecked = true;
         }
       });
-      localStorage.setItem("tasks", JSON.stringify(tasks));
+    } else {
+      e.target.parentNode.classList.remove("checked");
+      tasks.forEach((el) => {
+        if (e.target.nextElementSibling.innerText == el.task) {
+          el.isChecked = false;
+        }
+      });
     }
+
+    localStorage.setItem("tasks", JSON.stringify(tasks));
   }
 });
 
