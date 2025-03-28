@@ -9,11 +9,10 @@
 /* Input Form Style */
 
 .container {
+  width: 50%;
   margin: 40px auto;
   padding: 30px;
-  width: 50%;
   text-align: center;
-  /* background-color: seagreen; */
 }
 
 .title {
@@ -23,10 +22,10 @@
 }
 
 .container #input-task-form {
-  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 40px;
 }
 
 .container #input-task-form input {
@@ -35,15 +34,14 @@
 }
 
 .container #input-task-form .add-task-button {
-  margin-left: 10px;
-  flex: 1;
-  border-radius: 3px solid black;
-  padding: 10px;
-  box-sizing: border-box;
-
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: 10px;
+  padding: 10px;
+  border-radius: 3px solid black;
+  box-sizing: border-box;
+  flex: 1;
 }
 
 .container .add-task-button:hover {
@@ -54,30 +52,31 @@
 /* Task Style */
 
 .container .container-task {
-  margin: 30px auto 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  /* width: 100%; */
+  margin: 30px auto 0;
+  box-sizing: border-box;
   list-style: none;
   font-size: 30px;
-  box-sizing: border-box;
 }
 
 .container .container-task .task {
-  display: flex;
   width: 100%;
+  display: flex;
   justify-content: space-between;
-  text-align: left;
-  border: 1px solid black;
-  padding: 10px;
-  border-radius: 3px;
   margin: 8px auto;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 3px;
+  text-align: left;
 }
 
 .container .container-task .task span {
+  width: 100px;
   padding-left: 10px;
+  overflow-wrap: break-word;
   flex: 1;
 }
 
@@ -89,12 +88,12 @@
 .container .container-task .task .delete-task {
   width: 30px;
   height: 30px;
-  text-align: center;
-  line-height: 25px;
   margin-right: 5px;
   padding: 5px;
   border: 1px solid black;
   border-radius: 50%;
+  text-align: center;
+  line-height: 25px;
   text-decoration: none;
   color: black;
   cursor: pointer;
@@ -169,8 +168,13 @@
     width: 80%;
   }
 
+  .container .container-task {
+    margin-top: 0;
+  }
+
   .container .container-task .task {
-    font-size: 13px;
+    font-size: 15px;
+    line-height: 23px;
   }
 
   .container .container-task .task span {
@@ -178,7 +182,8 @@
   }
 
   .container .container-task .task .check-task {
-    width: 15px;
+    width: 22px;
+    height: 22px;
   }
 
   .container .container-task .task .delete-task {
